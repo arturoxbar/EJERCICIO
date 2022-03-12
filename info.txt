@@ -1,0 +1,16 @@
+el programa usa express, para correrlo con httpie e iniciar con la 
+autenticacion primero se crea un usuario en la base de datos, use el
+siguiente comando http localhost:3010/signup user==xx pwd==xx, lo mismo
+con el login http localhost:3010/signin user==xx pwd==xx, esto devolvera
+el token, el token que yo use para todo el proceso fue el siguiente:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYXJ0dXJvMSIsImV4cCI6MTY0NzA1NDc3NjM5MSwiaWQiOjMsImlhdCI6MTY0NzA1NDc3Nn0.APPEpgdp2sC-NfKnupiw-LIpyIiVyoUHmRF6BGPeBxU
+
+-para validar el token y mostrar la lista de productos de la base de datos
+en el otro api se utiliza el siguiente comando
+http localhost:3005/products "authorization: Bearer xx"
+DONDE XX ES EL TOKEN QUE TE PROPORCIONA EL SIGNIN
+
+los puertos en los que esta corriendo el programa son los siguientes:
+auth : 3010
+products : 3005
+proxy : 3000
