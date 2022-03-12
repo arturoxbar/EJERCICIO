@@ -1,0 +1,15 @@
+new promise
+async function
+nextTick 1
+nextTick 2
+nextTick 3
+then 1
+then 2
+microtask 1
+microtask 2
+immediate 1
+immediate 2
+timeout 1
+timeout 2
+
+aca, la funcion de lectura del archivo cambia el orden de ejecucion

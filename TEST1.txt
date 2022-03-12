@@ -1,0 +1,15 @@
+new promise
+async function
+nextTick 1
+nextTick 2
+nextTick 3
+then 1
+then 2
+microtask 1
+microtask 2
+timeout 1
+timeout 2
+immediate 1
+immediate 2
+
+segun el esquema esta es la forma correcta en la que se corre el codigo
