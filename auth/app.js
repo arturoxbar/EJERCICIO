@@ -1,16 +1,18 @@
-const { PrismaClient } = require('@prisma/client')
+const { PrismaClient } = require('@prisma/client');
+const bodyParser = require('body-parser');
 const express = require('express')
-
+const app = express()
 require ('dotenv').config();
 
 const jwt = require('jsonwebtoken');
 let prisma = new PrismaClient()
-const app = express()
 
-app.get('/signin', async function (req, res) {
+app.use(bodyParser.json({}))
 
-  let user = req.query['user']
-  let pwd = req.query['pwd']
+app.post('/signin', async function (req, res) {
+
+  let user = req.body.user
+  let pwd = req.body.pwd
 
   if (typeof user !== 'string' || typeof pwd !== 'string') {
     res.status(400).end()
@@ -33,10 +35,10 @@ app.get('/signin', async function (req, res) {
   }
 })
 
-app.get('/signup', async function (req, res) {
+app.post('/signup', async function (req, res) {
 
-  let user = req.query['user']
-  let pwd = req.query['pwd']
+  let user = req.body.user
+  let pwd = req.body.pwd
 
   if (typeof user !== 'string' || typeof pwd !== 'string') {
     res.status(400).end()
