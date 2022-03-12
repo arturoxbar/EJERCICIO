@@ -10,5 +10,5 @@ generator client {
 model Product {
   id    Int     @id @default(autoincrement())
   name String  @unique
-  price Decimal1
+  price Decimal
 }
