@@ -7,7 +7,7 @@ require ('dotenv').config();
 const jwt = require('jsonwebtoken');
 let prisma = new PrismaClient()
 
-app.use(bodyParser.json({}))
+app.use(bodyParser.json())
 
 app.post('/signin', async function (req, res) {
 
