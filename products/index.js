@@ -1,5 +1,4 @@
 const { PrismaClient } = require('@prisma/client')
-const { application } = require("express");
 const express = require('express');
 const jwt = require("jsonwebtoken");
 const app = express()
